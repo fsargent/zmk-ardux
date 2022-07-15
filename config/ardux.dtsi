@@ -512,7 +512,7 @@
 				BIG_BETWEEN_ROW_TWO_THREE_NONES
 				&kp LSHFT                                   &kp LA(LEFT)  &kp LA(BACKSPACE)  &kp LA(RIGHT) &kp LG(TAB)
 				BIG_BETWEEN_ROW_THREE_THUMBS
-				&none     &kp LG(SPACE) &kp LG(ENTER)
+				&kp LG(ENTER)     &kp LG(SPACE) &kp LG(ENTER)
 				BIG_TRAILING_NONES
 
 			>;
@@ -561,25 +561,3 @@
 	};
 };
 #endif
-
-&i2c0 {
-	status = "okay";
-	sda-pin = <34>; // nice!nano pin 102
-	scl-pin = <39>; // nice!nano pin 107
-
-	oled: ssd1306@3c {
-		compatible = "solomon,ssd1306fb";
-		reg = <0x3c>;
-		label = "DISPLAY";
-		width = <128>;
-		height = <32>;
-		segment-offset = <0>;
-		page-offset = <0>;
-		display-offset = <0>;
-		multiplex-ratio = <31>;
-		com-invdir;
-		segment-remap;
-		com-sequential;
-		prechargep = <0x22>;
-	};
-};
