@@ -10,6 +10,7 @@
 
 // Enable ARDUX Left
 #define ARDUX_LEFT 1
+#define ARDUX_BIG 1
 
 // ARTS Row
 #define KEY_A 3
@@ -22,6 +23,10 @@
 #define KEY_I 6
 #define KEY_O 5
 
+// Big ardux F1-12 layer keys for combo
+#define KEY_F_TOP 4
+#define KEY_F_BOTTOM 9
+
 // Define Custom Thumb Keys
 #define CUSTOM_THUMB &kp BACKSPACE &kp SPACE
 
@@ -29,6 +34,11 @@
 #define LEADING_NONES NONE(0,0,0)
 #define MIDDLE_NONES NONE(0,0,1)
 #define TRAILING_NONES NONE(0,0,6)
+#define BIG_LEADING_NONES NONE(0, 0, 0)
+#define BIG_BETWEEN_ROW_ONE_TWO_NONES NONE(0, 0, 0)
+#define BIG_BETWEEN_ROW_TWO_THREE_NONES NONE(0, 0, 0)
+#define BIG_BETWEEN_ROW_THREE_THUMBS NONE(0, 0, 0)
+#define BIG_TRAILING_NONES NONE(0, 0, 0)
 
 // Include main ardux.io keymap
 #include "../../../ardux.dtsi"
