@@ -35,5 +35,3 @@ choice LVGL_COLOR_DEPTH
 endchoice
 
 endif
-
-CONFIG_ZMK_USB_LOGGING=y
