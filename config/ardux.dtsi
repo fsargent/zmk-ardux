@@ -330,7 +330,7 @@
 				BIG_BETWEEN_ROW_TWO_THREE_NONES
 				&kp TAB              &kp EQUAL                                                         &kp DEL               &kp AT                &ctrl_alt_kp LALT LCTRL
 				BIG_BETWEEN_ROW_THREE_THUMBS
-				&kp ENTER            &kp SPACE                                                         &mo LAYER_ID_BIG_SYM
+				&kp ENTER            &kp SPACE                                                         &layer_custom_kp LAYER_ID_BIG_SYM ENTER
 				BIG_TRAILING_NONES
 			>;
 		};
@@ -453,11 +453,10 @@
 				BIG_BETWEEN_ROW_TWO_THREE_NONES
 				&kp LGUI                             &kp ESC                &kp DEL               &kp EQUAL                                                      &kp TAB
 				BIG_BETWEEN_ROW_THREE_THUMBS
-				&mo LAYER_ID_BIG_SYM                                &kp BACKSPACE             &kp ENTER
+			  &layer_custom_kp LAYER_ID_BIG_SYM BACKSPACE                              &kp SPACE             &kp ENTER
 				BIG_TRAILING_NONES
 			>;
 		};
-
 		navigation {
 			label = "Nav";
 			bindings = <
@@ -471,6 +470,7 @@
 				&kp LG(ENTER)     &kp LG(SPACE) &kp LG(ENTER)
 				BIG_TRAILING_NONES
 			>;
+		};
 		#else
 		base {
 			label = "ARDUX";
