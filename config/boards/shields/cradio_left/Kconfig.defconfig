@@ -4,7 +4,7 @@
 if SHIELD_CRADIO_ARDUX_LEFT || SHIELD_CRADIO_ARDUX_THUMB_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "Ardux L"
+	default "ARDUX L"
 
 config I2C
 	default y
