@@ -457,6 +457,20 @@
 				BIG_TRAILING_NONES
 			>;
 		};
+
+		navigation {
+			label = "Nav";
+			bindings = <
+				BIG_LEADING_NONES
+				&kp PG_UP                                   &kp HOME  &kp UP    &kp END &kp LG(H)
+				BIG_BETWEEN_ROW_ONE_TWO_NONES
+				&kp PG_DN                                   &kp LEFT  &kp DOWN  &kp RIGHT &kp ESC
+				BIG_BETWEEN_ROW_TWO_THREE_NONES
+				&kp LSHFT                                   &kp LA(LEFT)  &kp LA(BACKSPACE)  &kp LA(RIGHT) &kp LG(TAB)
+				BIG_BETWEEN_ROW_THREE_THUMBS
+				&kp LG(ENTER)     &kp LG(SPACE) &kp LG(ENTER)
+				BIG_TRAILING_NONES
+			>;
 		#else
 		base {
 			label = "ARDUX";
@@ -469,6 +483,16 @@
 				#if defined CUSTOM_THUMB
 				CUSTOM_THUMB
 				#endif
+			>;
+		};
+		navigation {
+			label = "Nav";
+			bindings = <
+				LEADING_NONES
+				&kp PG_UP                                   &kp HOME  &kp UP    &kp END
+				MIDDLE_NONES
+				&kp PG_DN                                   &kp LEFT  &kp DOWN  &kp RIGHT
+				TRAILING_NONES
 			>;
 		};
 		#endif
@@ -502,21 +526,7 @@
 				TRAILING_NONES
 			>;
 		};
-		navigation {
-			label = "Nav";
-			bindings = <
-				BIG_LEADING_NONES
-				&kp PG_UP                                   &kp HOME  &kp UP    &kp END &kp LG(H)
-				BIG_BETWEEN_ROW_ONE_TWO_NONES
-				&kp PG_DN                                   &kp LEFT  &kp DOWN  &kp RIGHT &kp ESC
-				BIG_BETWEEN_ROW_TWO_THREE_NONES
-				&kp LSHFT                                   &kp LA(LEFT)  &kp LA(BACKSPACE)  &kp LA(RIGHT) &kp LG(TAB)
-				BIG_BETWEEN_ROW_THREE_THUMBS
-				&kp LG(ENTER)     &kp LG(SPACE) &kp LG(ENTER)
-				BIG_TRAILING_NONES
-
-			>;
-		};
+		
 		bt {
 			label = "BT";
 			bindings = <
@@ -561,3 +571,25 @@
 	};
 };
 #endif
+
+&i2c0 {
+	status = "okay";
+	sda-pin = <34>; // nice!nano pin 102
+	scl-pin = <39>; // nice!nano pin 107
+
+	oled: ssd1306@3c {
+		compatible = "solomon,ssd1306fb";
+		reg = <0x3c>;
+		label = "DISPLAY";
+		width = <128>;
+		height = <32>;
+		segment-offset = <0>;
+		page-offset = <0>;
+		display-offset = <0>;
+		multiplex-ratio = <31>;
+		com-invdir;
+		segment-remap;
+		com-sequential;
+		prechargep = <0x22>;
+	};
+};
