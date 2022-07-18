@@ -454,7 +454,7 @@
 				BIG_BETWEEN_ROW_TWO_THREE_NONES
 				&kp ESC																							&kp LEFT      		 &kp RIGHT        	  &kp COMMA                                          	 &layer_custom_kp LAYER_ID_BIG_SYM TAB
 				BIG_BETWEEN_ROW_THREE_THUMBS
-			  &mt LGUI BACKSPACE                             &mt LSHIFT SPACE             &kp ENTER
+			  &mt LGUI BACKSPACE                             &mt LSHFT SPACE             &kp ENTER
 				BIG_TRAILING_NONES
 			>;
 		};
