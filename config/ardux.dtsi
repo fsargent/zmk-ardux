@@ -270,6 +270,8 @@
 		combo_x            { layers = <LAYER_ID_BASE>; timeout-ms = <TIMEOUT_COMBO_3>; key-positions = <KEY_R KEY_T KEY_S>; bindings = <&kp X>; };
 		combo_l            { layers = <LAYER_ID_BASE>; timeout-ms = <TIMEOUT_COMBO_3>; key-positions = <KEY_E KEY_Y KEY_I>; bindings = <&kp L>; };
 		combo_single_quote { layers = <LAYER_ID_BASE>; timeout-ms = <TIMEOUT_COMBO_3>; key-positions = <KEY_A KEY_Y KEY_I>; bindings = <&kp SQT>; };
+		combo_left { 	timeout-ms = <TIMEOUT_COMBO_3>; key-positions = <KEY_T KEY_R KEY_O>; bindings = <&kp LEFT>; };
+		combo_right { timeout-ms = <TIMEOUT_COMBO_3>; key-positions = <KEY_T KEY_R KEY_E>; bindings = <&kp RIGHT>; };
 		
 		/*****************************************
 		 * 4 key combos
