@@ -67,12 +67,12 @@
 	status = "okay";
 
     // Standard
-		sda-pin = <34>; // nice!nano pin 102
-		scl-pin = <39>; // nice!nano pin 107
+		// sda-pin = <34>; // nice!nano pin 102
+		// scl-pin = <39>; // nice!nano pin 107
 	
 			// Flipped
-			//	sda-pin = <39>; // nice!nano pin 107
-			//	scl-pin = <34>; // nice!nano pin 102
+			sda-pin = <39>; // nice!nano pin 107
+			scl-pin = <34>; // nice!nano pin 102
 
 	oled: ssd1306@3c {
 		compatible = "solomon,ssd1306fb";
